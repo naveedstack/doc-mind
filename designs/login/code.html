@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | Academic Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-dim": "#3d3dcb",
+                    "on-primary-fixed-variant": "#4e5c71",
+                    "surface-bright": "#f7f9fb",
+                    "primary": "#515f74",
+                    "inverse-on-surface": "#9a9d9f",
+                    "secondary": "#5148d8",
+                    "background": "#f7f9fb",
+                    "secondary-container": "#e3dfff",
+                    "on-secondary-fixed": "#2f1eb8",
+                    "primary-container": "#d5e3fd",
+                    "on-surface-variant": "#566166",
+                    "on-surface": "#2a3439",
+                    "surface-dim": "#cfdce3",
+                    "on-primary-fixed": "#324054",
+                    "on-tertiary": "#fbf7ff",
+                    "surface-variant": "#d9e4ea",
+                    "on-tertiary-fixed": "#000000",
+                    "error-container": "#fe8983",
+                    "surface-container-low": "#f0f4f7",
+                    "tertiary-fixed-dim": "#6366f1",
+                    "tertiary-fixed": "#7073ff",
+                    "surface-container-high": "#e1e9ee",
+                    "secondary-fixed-dim": "#d3d0ff",
+                    "on-secondary-container": "#4338ca",
+                    "outline-variant": "#a9b4b9",
+                    "on-tertiary-container": "#000000",
+                    "inverse-surface": "#0b0f10",
+                    "surface-container-highest": "#d9e4ea",
+                    "secondary-fixed": "#e3dfff",
+                    "tertiary": "#4a4bd7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#455367",
+                    "primary-fixed-dim": "#c7d5ee",
+                    "surface-tint": "#515f74",
+                    "primary-dim": "#455368",
+                    "error-dim": "#4e0309",
+                    "primary-fixed": "#d5e3fd",
+                    "on-primary": "#f6f7ff",
+                    "error": "#9f403d",
+                    "surface": "#f7f9fb",
+                    "on-tertiary-fixed-variant": "#010028",
+                    "on-error": "#fff7f6",
+                    "on-background": "#2a3439",
+                    "secondary-dim": "#453acc",
+                    "inverse-primary": "#d5e3fd",
+                    "on-secondary": "#fbf7ff",
+                    "on-error-container": "#752121",
+                    "on-secondary-fixed-variant": "#4e44d4",
+                    "tertiary-container": "#7073ff",
+                    "surface-container": "#e8eff3",
+                    "outline": "#717c82"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-inset-input:focus-within {
+            border-bottom: 2px solid #5148d8;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- The Shell Visibility Rule: Navigation is suppressed for login flow -->
+<main class="min-h-screen flex items-center justify-center p-6 md:p-12 relative overflow-hidden">
+<!-- Background Asymmetric Decorative Elements -->
+<div class="absolute top-[-10%] right-[-5%] w-[40vw] h-[40vw] rounded-full bg-primary-container/20 blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[30vw] h-[30vw] rounded-full bg-secondary-container/10 blur-[100px]"></div>
+<div class="w-full max-w-[1100px] grid md:grid-cols-12 gap-0 bg-surface-container-lowest rounded-[32px] overflow-hidden shadow-[0_40px_100px_-20px_rgba(42,52,57,0.06)] relative z-10">
+<!-- Visual/Editorial Column -->
+<div class="hidden md:flex md:col-span-5 bg-primary relative overflow-hidden flex-col justify-end p-12">
+<div class="absolute inset-0 opacity-40">
+<img alt="Academic Sanctuary" class="w-full h-full object-cover grayscale brightness-50" data-alt="Minimalist library with tall oak shelves and soft morning light filtering through high windows creating geometric shadows on wooden floors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSCRKZv-eGe-4Xn6KC0DFK9_iSGvtSgInoKYxrp2OFngeC2PML1MZd5qCNqEQIzmsT1yTsgd-tQ2wDuoU7DleilpVqYJ20ciXq4bBW1_zmFoDJ6zWcfZt6B74Z_pNd91Pi95N0U5oax3PahRO9kELAQHvlhsy9YxRJx-nseQywzZhajxiTaaz0KAlNzpQAjyx6XNd721bBbK6S3-a5IoDG4Gifzt8azIyPISI4jby8gjzhVgJOGil3ltfWBAj8KY7zHVT3Za9Sdzbz"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/20 to-transparent"></div>
+<div class="relative z-10">
+<h2 class="font-headline text-4xl font-extrabold text-on-primary tracking-tighter mb-4 leading-tight">
+                        Cultivate your focus.
+                    </h2>
+<p class="text-on-primary/80 font-body text-lg leading-relaxed max-w-xs">
+                        Enter a space designed for cognitive depth and uninterrupted discovery.
+                    </p>
+</div>
+</div>
+<!-- Interaction/Login Column -->
+<div class="md:col-span-7 p-8 md:p-20 flex flex-col justify-center">
+<header class="mb-12">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 bg-primary-dim rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xl">auto_stories</span>
+</div>
+<span class="font-headline font-extrabold text-2xl tracking-tighter text-on-surface">Study Sanctuary</span>
+</div>
+<h1 class="font-headline text-3xl font-bold text-on-surface mb-2 tracking-tight">Welcome back</h1>
+<p class="text-on-surface-variant font-body">Continue your curated academic journey.</p>
+</header>
+<form class="space-y-8">
+<div class="space-y-6">
+<!-- Email Input -->
+<div class="space-y-2">
+<label class="block font-label text-sm font-semibold text-on-surface-variant px-1" for="email">Institutional Email</label>
+<div class="soft-inset-input flex items-center bg-surface-container-high rounded-xl transition-all duration-300">
+<div class="pl-4 text-outline">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+</div>
+<input class="w-full bg-transparent border-none focus:ring-0 px-4 py-4 text-on-surface placeholder:text-outline font-body" id="email" placeholder="name@university.edu" type="email"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="space-y-2">
+<div class="flex justify-between items-center px-1">
+<label class="font-label text-sm font-semibold text-on-surface-variant" for="password">Password</label>
+<a class="text-xs font-semibold text-secondary hover:text-secondary-dim transition-colors" href="#">Forgot key?</a>
+</div>
+<div class="soft-inset-input flex items-center bg-surface-container-high rounded-xl transition-all duration-300">
+<div class="pl-4 text-outline">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<input class="w-full bg-transparent border-none focus:ring-0 px-4 py-4 text-on-surface placeholder:text-outline font-body" id="password" placeholder="••••••••" type="password"/>
+<button class="pr-4 text-outline hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 px-1">
+<input class="w-5 h-5 rounded-md border-outline-variant text-secondary focus:ring-secondary/20 bg-surface-container-high" id="remember" type="checkbox"/>
+<label class="text-sm text-on-surface-variant font-medium select-none cursor-pointer" for="remember">Keep session active</label>
+</div>
+<div class="space-y-6 pt-2">
+<!-- Primary CTA -->
+<button class="w-full bg-gradient-to-br from-primary to-primary-dim text-white font-headline font-bold py-4 rounded-xl shadow-[0_12px_24px_-8px_rgba(81,95,116,0.3)] hover:scale-[1.01] active:scale-[0.99] transition-all duration-200" type="submit">
+                            Begin Study Session
+                        </button>
+<div class="relative flex items-center justify-center">
+<div class="w-full h-px bg-surface-container-high"></div>
+<span class="absolute px-4 bg-surface-container-lowest text-xs font-bold text-outline uppercase tracking-widest">or entry via</span>
+</div>
+<!-- Secondary Action -->
+<button class="w-full flex items-center justify-center gap-3 bg-secondary-container text-on-secondary-container font-label font-bold py-4 rounded-xl hover:bg-secondary-fixed transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">fingerprint</span>
+                            Biometric Passkey
+                        </button>
+</div>
+</form>
+<footer class="mt-12 text-center">
+<p class="text-on-surface-variant text-sm">
+                        New to the Sanctuary? 
+                        <a class="text-secondary font-bold hover:underline underline-offset-4 ml-1" href="#">Create an account</a>
+</p>
+</footer>
+</div>
+</div>
+<!-- Footer Meta Info -->
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-6 text-[10px] font-bold text-outline uppercase tracking-widest pointer-events-none md:pointer-events-auto">
+<span class="flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-secondary"></span> System Online</span>
+<span class="opacity-40">v4.0.2 Academic</span>
+<a class="hover:text-primary transition-colors pointer-events-auto" href="#">Privacy Policy</a>
+</div>
+</main>
+</body></html>

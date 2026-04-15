@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reset Password | Academic Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-dim": "#3d3dcb",
+                    "on-primary-fixed-variant": "#4e5c71",
+                    "surface-bright": "#f7f9fb",
+                    "primary": "#515f74",
+                    "inverse-on-surface": "#9a9d9f",
+                    "secondary": "#5148d8",
+                    "background": "#f7f9fb",
+                    "secondary-container": "#e3dfff",
+                    "on-secondary-fixed": "#2f1eb8",
+                    "primary-container": "#d5e3fd",
+                    "on-surface-variant": "#566166",
+                    "on-surface": "#2a3439",
+                    "surface-dim": "#cfdce3",
+                    "on-primary-fixed": "#324054",
+                    "on-tertiary": "#fbf7ff",
+                    "surface-variant": "#d9e4ea",
+                    "on-tertiary-fixed": "#000000",
+                    "error-container": "#fe8983",
+                    "surface-container-low": "#f0f4f7",
+                    "tertiary-fixed-dim": "#6366f1",
+                    "tertiary-fixed": "#7073ff",
+                    "surface-container-high": "#e1e9ee",
+                    "secondary-fixed-dim": "#d3d0ff",
+                    "on-secondary-container": "#4338ca",
+                    "outline-variant": "#a9b4b9",
+                    "on-tertiary-container": "#000000",
+                    "inverse-surface": "#0b0f10",
+                    "surface-container-highest": "#d9e4ea",
+                    "secondary-fixed": "#e3dfff",
+                    "tertiary": "#4a4bd7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#455367",
+                    "primary-fixed-dim": "#c7d5ee",
+                    "surface-tint": "#515f74",
+                    "primary-dim": "#455368",
+                    "error-dim": "#4e0309",
+                    "primary-fixed": "#d5e3fd",
+                    "on-primary": "#f6f7ff",
+                    "error": "#9f403d",
+                    "surface": "#f7f9fb",
+                    "on-tertiary-fixed-variant": "#010028",
+                    "on-error": "#fff7f6",
+                    "on-background": "#2a3439",
+                    "secondary-dim": "#453acc",
+                    "inverse-primary": "#d5e3fd",
+                    "on-secondary": "#fbf7ff",
+                    "on-error-container": "#752121",
+                    "on-secondary-fixed-variant": "#4e44d4",
+                    "tertiary-container": "#7073ff",
+                    "surface-container": "#e8eff3",
+                    "outline": "#717c82"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-inset-shadow {
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+        }
+        .premium-glow {
+            box-shadow: 0 24px 48px -12px rgba(42, 52, 57, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex items-center justify-center p-6 selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Transactional Page: Navigation suppressed as per Shell Visibility Rule -->
+<main class="w-full max-w-md">
+<!-- Brand Header - Intentional Asymmetry -->
+<div class="mb-10 text-center md:text-left md:pl-2">
+<div class="inline-flex items-center gap-2 mb-6">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-dim flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+</div>
+<span class="font-headline font-extrabold text-xl tracking-tighter text-primary">Academic Sanctuary</span>
+</div>
+<h1 class="font-headline font-bold text-3xl text-on-surface tracking-tight mb-3">Restore Focus</h1>
+<p class="text-on-surface-variant leading-relaxed max-w-xs mx-auto md:mx-0">Enter your email and we'll send instructions to reset your workspace access.</p>
+</div>
+<!-- Auth Card -->
+<div class="bg-surface-container-lowest rounded-[24px] p-8 md:p-10 premium-glow relative overflow-hidden">
+<!-- Subtle Tonal Background Element -->
+<div class="absolute -top-24 -right-24 w-48 h-48 bg-secondary-container/30 rounded-full blur-3xl opacity-50"></div>
+<form action="#" class="space-y-8 relative z-10">
+<div>
+<label class="block font-label text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-3 ml-1" for="email">Work Email Address</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-high border-none rounded-xl px-5 py-4 text-on-surface placeholder:text-outline focus:ring-0 focus:outline-none transition-all duration-300 soft-inset-shadow peer" id="email" name="email" placeholder="curator@sanctuary.edu" required="" type="email"/>
+<!-- Focus Indigo Bottom Bar (Design System Spec) -->
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-secondary transition-all duration-300 peer-focus:w-full"></div>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full bg-gradient-to-br from-primary to-primary-dim text-on-primary font-headline font-bold py-4 rounded-xl shadow-lg shadow-primary/10 hover:opacity-90 active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2" type="submit">
+<span>Send Reset Link</span>
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</form>
+<div class="mt-8 pt-8 border-t border-surface-variant/30 text-center">
+<a class="inline-flex items-center gap-2 text-on-surface-variant hover:text-secondary font-medium transition-colors duration-200 group" href="/login">
+<span class="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform" data-icon="keyboard_backspace">keyboard_backspace</span>
+<span class="text-sm">Back to login</span>
+</a>
+</div>
+</div>
+<!-- Semantic Footer / Meta Content -->
+<footer class="mt-12 text-center">
+<p class="text-xs text-outline font-medium tracking-wide">
+                © 2024 Study Sanctuary • Secure Protocol 4.2
+            </p>
+<div class="mt-4 flex justify-center gap-6">
+<a class="text-xs text-on-surface-variant/60 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-xs text-on-surface-variant/60 hover:text-primary transition-colors" href="#">Support Center</a>
+</div>
+</footer>
+</main>
+<!-- Decorative Background Visuals -->
+<div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+<div class="absolute top-[-10%] right-[-5%] w-[40%] h-[40%] rounded-full bg-secondary-container/10 blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[30%] h-[30%] rounded-full bg-primary-container/10 blur-[100px]"></div>
+</div>
+</body></html>

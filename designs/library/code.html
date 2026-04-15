@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-dim": "#3d3dcb",
+                    "on-primary-fixed-variant": "#4e5c71",
+                    "surface-bright": "#f7f9fb",
+                    "primary": "#515f74",
+                    "inverse-on-surface": "#9a9d9f",
+                    "secondary": "#5148d8",
+                    "background": "#f7f9fb",
+                    "secondary-container": "#e3dfff",
+                    "on-secondary-fixed": "#2f1eb8",
+                    "primary-container": "#d5e3fd",
+                    "on-surface-variant": "#566166",
+                    "on-surface": "#2a3439",
+                    "surface-dim": "#cfdce3",
+                    "on-primary-fixed": "#324054",
+                    "on-tertiary": "#fbf7ff",
+                    "surface-variant": "#d9e4ea",
+                    "on-tertiary-fixed": "#000000",
+                    "error-container": "#fe8983",
+                    "surface-container-low": "#f0f4f7",
+                    "tertiary-fixed-dim": "#6366f1",
+                    "tertiary-fixed": "#7073ff",
+                    "surface-container-high": "#e1e9ee",
+                    "secondary-fixed-dim": "#d3d0ff",
+                    "on-secondary-container": "#4338ca",
+                    "outline-variant": "#a9b4b9",
+                    "on-tertiary-container": "#000000",
+                    "inverse-surface": "#0b0f10",
+                    "surface-container-highest": "#d9e4ea",
+                    "secondary-fixed": "#e3dfff",
+                    "tertiary": "#4a4bd7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#455367",
+                    "primary-fixed-dim": "#c7d5ee",
+                    "surface-tint": "#515f74",
+                    "primary-dim": "#455368",
+                    "error-dim": "#4e0309",
+                    "primary-fixed": "#d5e3fd",
+                    "on-primary": "#f6f7ff",
+                    "error": "#9f403d",
+                    "surface": "#f7f9fb",
+                    "on-tertiary-fixed-variant": "#010028",
+                    "on-error": "#fff7f6",
+                    "on-background": "#2a3439",
+                    "secondary-dim": "#453acc",
+                    "inverse-primary": "#d5e3fd",
+                    "on-secondary": "#fbf7ff",
+                    "on-error-container": "#752121",
+                    "on-secondary-fixed-variant": "#4e44d4",
+                    "tertiary-container": "#7073ff",
+                    "surface-container": "#e8eff3",
+                    "outline": "#717c82"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .font-manrope { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar Anchor -->
+<aside class="fixed left-0 top-0 h-full flex flex-col p-4 h-screen w-64 border-r-0 rounded-r-none bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl z-50">
+<div class="mb-8 px-4">
+<h1 class="text-xl font-bold tracking-tighter text-slate-800 dark:text-slate-100 font-manrope">Study Sanctuary</h1>
+<p class="text-xs text-on-surface-variant">Focused Curator</p>
+</div>
+<button class="mb-8 flex items-center justify-center gap-2 px-4 py-3 bg-primary text-on-primary rounded-xl font-semibold transition-all duration-200 active:opacity-80 scale-98 shadow-sm">
+<span class="material-symbols-outlined">add</span>
+<span class="font-manrope text-sm font-medium tracking-tight">New Chat</span>
+</button>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-900 dark:text-indigo-200 rounded-xl font-semibold font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+                Library
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="Timer">timer</span>
+                Sessions
+            </a>
+</nav>
+<div class="mt-auto pt-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+                Help
+            </a>
+<div class="mt-4 pt-4 border-t border-outline-variant/10 flex items-center gap-3 px-4">
+<img alt="User profile" class="w-8 h-8 rounded-full bg-surface-container-high" data-alt="close-up portrait of a professional student with soft lighting, minimalist office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiChUVGI3SfR3pjQ0J924dGYrtp6t0j8_UJNSRqrnOyAM14CzK18b99gRtbAJNOYH4rGulkXC2i7o-wyjekZao--qc2mRXlP50zAChZU3szB4dVQc0BsxSSoVOU5owlgOK9RZ0t9zXMfje0zs5A6HyUWzPv2jcBrPMq3IQTqp7FJkFQwgqVLc-G6tCxWcsMK3Tzy43gO0saEiO_u8EoN7fUjhnYMdIo528AAuXoKzKyE2YUo-T_u4v7okkc6rRYtC3bodPd32hxGff"/>
+<div class="overflow-hidden">
+<p class="text-xs font-bold truncate">Alex Chen</p>
+<p class="text-[10px] text-on-surface-variant">Premium Member</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopNavBar Anchor -->
+<header class="fixed top-0 right-0 left-64 h-16 flex items-center justify-between px-8 z-40 bg-slate-50/50 dark:bg-slate-950/50 backdrop-blur-md">
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-sm">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-high rounded-xl text-sm border-none focus:ring-2 focus:ring-secondary/20 w-64 transition-all duration-300" placeholder="Search resources..." type="text"/>
+</div>
+<nav class="flex gap-6">
+<a class="text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition-all duration-300 ease-in-out font-manrope text-sm" href="#">Focus Mode</a>
+<a class="text-indigo-700 dark:text-indigo-400 font-bold border-b-2 border-indigo-700 transition-all duration-300 ease-in-out font-manrope text-sm" href="#">Resources</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-700 dark:text-slate-300 hover:bg-slate-200/20 rounded-lg transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-700 dark:text-slate-300 hover:bg-slate-200/20 rounded-lg transition-all">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-24 px-12 pb-12 min-h-screen">
+<div class="max-w-6xl mx-auto">
+<!-- Header Section with Editorial Asymmetry -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
+<div class="max-w-xl">
+<h2 class="text-4xl font-extrabold tracking-tighter font-manrope text-primary mb-3">Knowledge Library</h2>
+<p class="text-on-surface-variant leading-relaxed">Organize your academic assets. Every document here serves as context for your deep work sessions and AI-assisted research.</p>
+</div>
+<div class="flex gap-3">
+<div class="flex flex-col items-end">
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold mb-1">Storage used</span>
+<div class="w-48 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[64%]"></div>
+</div>
+<span class="text-xs mt-1 font-medium text-on-surface-variant">1.2 GB of 2.0 GB</span>
+</div>
+</div>
+</div>
+<!-- Upload Zone: Large Drag-and-Drop -->
+<section class="mb-16">
+<div class="relative group">
+<div class="absolute -inset-0.5 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-[2rem] blur opacity-75"></div>
+<div class="relative flex flex-col items-center justify-center p-16 bg-surface-container-lowest border-2 border-dashed border-outline-variant/20 rounded-[2rem] transition-all hover:border-secondary/40 hover:bg-surface-container-low/30">
+<div class="w-16 h-16 bg-secondary-container rounded-2xl flex items-center justify-center text-on-secondary-container mb-6">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">upload_file</span>
+</div>
+<h3 class="text-xl font-bold font-manrope text-primary mb-2">Ingest New Knowledge</h3>
+<p class="text-on-surface-variant text-center max-w-sm mb-8">Drag and drop PDFs, EPUBs, or text files. Our curator will automatically index them for your sessions.</p>
+<button class="px-8 py-3 bg-primary text-on-primary rounded-xl font-semibold text-sm transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/10">
+                            Select Files
+                        </button>
+</div>
+</div>
+</section>
+<!-- Document Grid: Bento-style Cards -->
+<section>
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-lg font-bold font-manrope text-primary">Recent Documents</h3>
+<div class="flex gap-4">
+<button class="flex items-center gap-2 text-xs font-semibold text-on-surface-variant px-3 py-1.5 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-base">filter_list</span> Filter
+                        </button>
+<button class="flex items-center gap-2 text-xs font-semibold text-on-surface-variant px-3 py-1.5 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-base">sort</span> Date
+                        </button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Ready Card 1 -->
+<div class="group p-6 bg-surface-container-lowest rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 flex flex-col h-full border border-outline-variant/5">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">description</span>
+</div>
+<span class="px-3 py-1 bg-green-50 text-green-700 text-[10px] font-bold rounded-full uppercase tracking-tighter">Ready</span>
+</div>
+<div class="mb-8 flex-1">
+<h4 class="font-bold text-primary font-manrope mb-1 group-hover:text-secondary transition-colors truncate">Quantum Mechanics Basics.pdf</h4>
+<p class="text-xs text-on-surface-variant">Added Oct 24, 2023 • 4.2 MB</p>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/10">
+<div class="flex -space-x-2">
+<span class="px-2 py-0.5 bg-secondary-fixed-dim text-on-secondary-fixed text-[10px] rounded font-medium">Physics</span>
+</div>
+<div class="flex gap-1">
+<button class="p-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-2 text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Processing Card -->
+<div class="group p-6 bg-surface-container-lowest rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 flex flex-col h-full border border-outline-variant/5 relative overflow-hidden">
+<div class="absolute bottom-0 left-0 h-1 bg-indigo-200 w-full">
+<div class="h-full bg-secondary w-2/3"></div>
+</div>
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">sync</span>
+</div>
+<span class="px-3 py-1 bg-indigo-50 text-secondary text-[10px] font-bold rounded-full uppercase tracking-tighter">Processing</span>
+</div>
+<div class="mb-8 flex-1">
+<h4 class="font-bold text-primary font-manrope mb-1 truncate">Macroeconomic Trends 2024.docx</h4>
+<p class="text-xs text-on-surface-variant">Added Today • 12.8 MB</p>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/10 opacity-50 cursor-not-allowed">
+<div class="flex gap-1">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant text-[10px] rounded font-medium">Economics</span>
+</div>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-lg p-2">more_horiz</span>
+</div>
+</div>
+</div>
+<!-- Ready Card 2 -->
+<div class="group p-6 bg-surface-container-lowest rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 flex flex-col h-full border border-outline-variant/5">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">auto_stories</span>
+</div>
+<span class="px-3 py-1 bg-green-50 text-green-700 text-[10px] font-bold rounded-full uppercase tracking-tighter">Ready</span>
+</div>
+<div class="mb-8 flex-1">
+<h4 class="font-bold text-primary font-manrope mb-1 group-hover:text-secondary transition-colors truncate">Philosophy of Mind - Notes.txt</h4>
+<p class="text-xs text-on-surface-variant">Added Oct 21, 2023 • 156 KB</p>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/10">
+<div class="flex -space-x-2">
+<span class="px-2 py-0.5 bg-secondary-fixed-dim text-on-secondary-fixed text-[10px] rounded font-medium">Philosophy</span>
+</div>
+<div class="flex gap-1">
+<button class="p-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-2 text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Ready Card 3 -->
+<div class="group p-6 bg-surface-container-lowest rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 flex flex-col h-full border border-outline-variant/5">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">picture_as_pdf</span>
+</div>
+<span class="px-3 py-1 bg-green-50 text-green-700 text-[10px] font-bold rounded-full uppercase tracking-tighter">Ready</span>
+</div>
+<div class="mb-8 flex-1">
+<h4 class="font-bold text-primary font-manrope mb-1 group-hover:text-secondary transition-colors truncate">Advanced Calculus Vol II.pdf</h4>
+<p class="text-xs text-on-surface-variant">Added Oct 18, 2023 • 25.1 MB</p>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/10">
+<div class="flex -space-x-2">
+<span class="px-2 py-0.5 bg-secondary-fixed-dim text-on-secondary-fixed text-[10px] rounded font-medium">Mathematics</span>
+</div>
+<div class="flex gap-1">
+<button class="p-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-2 text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</body></html>

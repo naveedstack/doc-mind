@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-dim": "#3d3dcb",
+                    "on-primary-fixed-variant": "#4e5c71",
+                    "surface-bright": "#f7f9fb",
+                    "primary": "#515f74",
+                    "inverse-on-surface": "#9a9d9f",
+                    "secondary": "#5148d8",
+                    "background": "#f7f9fb",
+                    "secondary-container": "#e3dfff",
+                    "on-secondary-fixed": "#2f1eb8",
+                    "primary-container": "#d5e3fd",
+                    "on-surface-variant": "#566166",
+                    "on-surface": "#2a3439",
+                    "surface-dim": "#cfdce3",
+                    "on-primary-fixed": "#324054",
+                    "on-tertiary": "#fbf7ff",
+                    "surface-variant": "#d9e4ea",
+                    "on-tertiary-fixed": "#000000",
+                    "error-container": "#fe8983",
+                    "surface-container-low": "#f0f4f7",
+                    "tertiary-fixed-dim": "#6366f1",
+                    "tertiary-fixed": "#7073ff",
+                    "surface-container-high": "#e1e9ee",
+                    "secondary-fixed-dim": "#d3d0ff",
+                    "on-secondary-container": "#4338ca",
+                    "outline-variant": "#a9b4b9",
+                    "on-tertiary-container": "#000000",
+                    "inverse-surface": "#0b0f10",
+                    "surface-container-highest": "#d9e4ea",
+                    "secondary-fixed": "#e3dfff",
+                    "tertiary": "#4a4bd7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#455367",
+                    "primary-fixed-dim": "#c7d5ee",
+                    "surface-tint": "#515f74",
+                    "primary-dim": "#455368",
+                    "error-dim": "#4e0309",
+                    "primary-fixed": "#d5e3fd",
+                    "on-primary": "#f6f7ff",
+                    "error": "#9f403d",
+                    "surface": "#f7f9fb",
+                    "on-tertiary-fixed-variant": "#010028",
+                    "on-error": "#fff7f6",
+                    "on-background": "#2a3439",
+                    "secondary-dim": "#453acc",
+                    "inverse-primary": "#d5e3fd",
+                    "on-secondary": "#fbf7ff",
+                    "on-error-container": "#752121",
+                    "on-secondary-fixed-variant": "#4e44d4",
+                    "tertiary-container": "#7073ff",
+                    "surface-container": "#e8eff3",
+                    "outline": "#717c82"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- SideNavBar Integration -->
+<aside class="fixed left-0 top-0 h-full flex flex-col p-4 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl h-screen w-64 border-r-0 rounded-r-none z-50">
+<div class="flex flex-col h-full">
+<div class="mb-8 px-2">
+<h1 class="text-xl font-bold tracking-tighter text-slate-800 dark:text-slate-100 font-headline">Study Sanctuary</h1>
+<p class="text-xs text-on-surface-variant font-medium tracking-tight">Focused Curator</p>
+</div>
+<button class="mb-6 flex items-center justify-center gap-2 px-4 py-3 bg-primary text-on-primary rounded-xl font-semibold shadow-sm hover:opacity-90 transition-all duration-200 scale-98 active:opacity-80">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span class="font-label text-sm">New Chat</span>
+</button>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-900 dark:text-indigo-200 rounded-xl font-semibold font-manrope text-sm tracking-tight transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Dashboard
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+                    Library
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope text-sm font-medium tracking-tight active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="Timer">timer</span>
+                    Sessions
+                </a>
+</nav>
+<div class="mt-auto space-y-1 pt-4 border-t border-slate-200/20">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 transition-colors font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                    Settings
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 transition-colors font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+                    Help
+                </a>
+<div class="flex items-center gap-3 px-4 py-4 mt-2 bg-slate-100 dark:bg-slate-800/50 rounded-xl">
+<img alt="User profile" class="w-8 h-8 rounded-full object-cover shadow-sm" data-alt="professional headshot of a scholar with glasses in a library setting with soft bookshelf background lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqt3Zw_sTBQj25yqhlbmJOlY8tbdG3B5ObdsZt8sbxlr16oQ4_LOVqc9-R9cHuLAIM5gWA9elGYZSqW95jJxUu0bz3jXUP0dxawdViyCC99YdRA-epmnd2WHbE76vEVJvoQee2blwlns5OeWCqVzFfMqunzCNn8YxMTrLAlBYsGEgoRMe-wXXjWJ4sBXcIb3SdCitPlDIxegWHK-9GfNpm7kGJVwlJPfyw1bT9_yEDjBjAkQVJWxm67umVfkYLQ3jYRm3EoWoQIExT"/>
+<div class="overflow-hidden">
+<p class="text-xs font-bold text-on-surface truncate">Julian Reed</p>
+<p class="text-[10px] text-on-surface-variant truncate">Premium Researcher</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopNavBar Integration -->
+<header class="fixed top-0 right-0 left-64 h-16 flex items-center justify-between px-8 z-40 bg-slate-50/50 dark:bg-slate-950/50 backdrop-blur-md transition-all duration-300 ease-in-out">
+<div class="flex items-center gap-6">
+<div class="relative flex items-center bg-surface-container-high rounded-xl px-4 py-2 w-64 group transition-all duration-300">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm font-body ml-2 w-full placeholder:text-on-surface-variant/60" placeholder="Search archive..." type="text"/>
+</div>
+<nav class="flex gap-8">
+<a class="text-indigo-700 dark:text-indigo-400 font-bold border-b-2 border-indigo-700 py-5 font-manrope text-sm transition-all" href="#">Focus Mode</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 py-5 font-manrope text-sm transition-all" href="#">Resources</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-700 dark:text-slate-300 hover:bg-slate-200/30 rounded-lg transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-700 dark:text-slate-300 hover:bg-slate-200/30 rounded-lg transition-all">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant/10">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="close-up portrait of a male researcher against a neutral professional background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYur4fI0WtA5O-wY7XI-hIcrMQkWHfjwBK9gyhZi6-vnolYUcep9Z6c9LdvosSmMQTSvHENSvzNNTSokSskmOXNtbUj2MHBQ02OUzsi0Sb31uxufH-Mf8Zmpq5mrUdD1Qa2yk7rMkkPPxysmOqhxl0zVLdIi8W3stJVzQaxhUxPMUsduYVMxEHkUaKuakM1u1iCFyq1FkhVo2PlGPXhiIfxlui7P2HCDljPitNMgWgUUNIVZbVerSLxTsSEYm5F2qQNhYN_7mYud_x"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-16 h-screen flex overflow-hidden">
+<!-- Left Panel: Session History -->
+<section class="w-80 h-full bg-surface-container-low flex flex-col border-r-0">
+<div class="p-6">
+<h2 class="font-headline font-bold text-on-surface text-lg mb-4">Chat History</h2>
+<div class="space-y-4 overflow-y-auto no-scrollbar pb-10">
+<!-- History Item -->
+<div class="p-4 bg-surface-container-lowest rounded-xl cursor-pointer hover:bg-surface-container-highest transition-colors group">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] uppercase tracking-widest font-bold text-secondary font-label">Active Session</span>
+<span class="text-[10px] text-on-surface-variant font-label">2m ago</span>
+</div>
+<p class="text-sm font-semibold text-on-surface leading-tight font-headline">The Ethics of Neural Networks</p>
+<p class="text-xs text-on-surface-variant mt-2 line-clamp-2">Discussing the implications of cognitive automation in higher education...</p>
+</div>
+<!-- History Item -->
+<div class="p-4 bg-transparent rounded-xl cursor-pointer hover:bg-surface-container-lowest transition-colors group">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant/40 font-label">Previous</span>
+<span class="text-[10px] text-on-surface-variant font-label">1h ago</span>
+</div>
+<p class="text-sm font-semibold text-on-surface/80 leading-tight font-headline">Roman Architecture: Vitruvian Principles</p>
+</div>
+<!-- History Item -->
+<div class="p-4 bg-transparent rounded-xl cursor-pointer hover:bg-surface-container-lowest transition-colors group">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant/40 font-label">Yesterday</span>
+<span class="text-[10px] text-on-surface-variant font-label">Oct 12</span>
+</div>
+<p class="text-sm font-semibold text-on-surface/80 leading-tight font-headline">Late Capitalism Analysis</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Panel: Main Chat Area -->
+<section class="flex-1 flex flex-col relative bg-surface">
+<!-- Chat Header -->
+<div class="px-10 py-4 flex items-center justify-between bg-surface/80 backdrop-blur-sm z-10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[20px]">auto_awesome</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface leading-none">Atheneum AI</h3>
+<p class="text-xs text-on-surface-variant font-medium mt-1 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                            Refining "The Ethics of Neural Networks"
+                        </p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="px-3 py-1.5 rounded-lg border-outline-variant/20 border text-xs font-bold text-primary hover:bg-surface-container-high transition-colors">Export Session</button>
+<button class="p-2 rounded-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Messages Area -->
+<div class="flex-1 overflow-y-auto px-10 pt-4 pb-32 no-scrollbar">
+<div class="max-w-4xl mx-auto space-y-12">
+<!-- Message: Scholar (User) -->
+<div class="flex flex-col items-end">
+<div class="bg-surface-container-high rounded-2xl rounded-tr-none px-6 py-4 max-w-[80%]">
+<p class="text-sm text-on-surface leading-relaxed">
+                                Can you help me synthesize the relationship between Bentham's panopticon and modern algorithmic surveillance? I'm particularly interested in how the concept of 'unverifiable visibility' translates to data harvesting.
+                            </p>
+</div>
+<div class="mt-2 flex items-center gap-2">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">Scholar</span>
+<span class="text-[10px] text-on-surface-variant/50">14:22</span>
+</div>
+</div>
+<!-- Message: Atheneum AI -->
+<div class="flex flex-col items-start">
+<div class="flex gap-4 items-start w-full">
+<div class="min-w-[40px] h-10 rounded-xl bg-secondary-container flex items-center justify-center mt-1">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="flex-1">
+<div class="bg-surface-container-lowest border border-outline-variant/10 rounded-2xl rounded-tl-none px-7 py-6 shadow-sm">
+<p class="text-[15px] text-on-surface leading-relaxed mb-6">
+                                        The synthesis you're proposing is central to contemporary digital sociology. In Bentham's original framework, the <span class="font-bold text-secondary">unverifiable visibility</span> ensures that the subjects discipline themselves because they *might* be watched.
+                                    </p>
+<p class="text-[15px] text-on-surface leading-relaxed mb-8">
+                                        Translating this to data harvesting, the "watchtower" is no longer a physical architecture but an omnipresent, invisible computational layer. Modern surveillance is even more profound because it doesn't just watch behavior; it predicts and modifies it through continuous algorithmic feedback loops.
+                                    </p>
+<!-- Citations/Sources -->
+<div class="bg-surface-container-low rounded-xl p-5 border-l-4 border-secondary">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-secondary text-sm">menu_book</span>
+<h4 class="text-xs font-bold text-on-surface tracking-tight uppercase">Cited Sources</h4>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-3 rounded-lg flex items-start gap-3 hover:shadow-md transition-shadow cursor-pointer">
+<div class="w-8 h-10 bg-primary/10 rounded flex items-center justify-center text-[10px] font-bold text-primary">PDF</div>
+<div>
+<p class="text-[11px] font-bold text-on-surface line-clamp-1">Foucault, M. (1975)</p>
+<p class="text-[9px] text-on-surface-variant italic">Discipline and Punish</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg flex items-start gap-3 hover:shadow-md transition-shadow cursor-pointer">
+<div class="w-8 h-10 bg-indigo-500/10 rounded flex items-center justify-center text-[10px] font-bold text-indigo-700">WEB</div>
+<div>
+<p class="text-[11px] font-bold text-on-surface line-clamp-1">Zuboff, S. (2019)</p>
+<p class="text-[9px] text-on-surface-variant italic">The Age of Surveillance Capitalism</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-3 flex items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter">Atheneum AI</span>
+<span class="text-[10px] text-on-surface-variant/50">14:23</span>
+</div>
+<div class="flex gap-2">
+<button class="p-1 hover:text-secondary transition-colors"><span class="material-symbols-outlined text-sm">thumb_up</span></button>
+<button class="p-1 hover:text-error transition-colors"><span class="material-symbols-outlined text-sm">thumb_down</span></button>
+<button class="p-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">content_copy</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Message Fragment: Thinking State -->
+<div class="flex gap-4 items-center opacity-40">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant animate-pulse" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<p class="text-xs font-medium italic text-on-surface-variant">Atheneum is processing the connection to your library...</p>
+</div>
+</div>
+</div>
+<!-- Input Box: Float Anchor -->
+<div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-surface via-surface/95 to-transparent">
+<div class="max-w-4xl mx-auto relative">
+<div class="bg-surface-container-lowest rounded-2xl p-2 shadow-[0_8px_40px_-12px_rgba(42,52,57,0.12)] border border-outline-variant/10 flex items-end gap-3 group focus-within:border-secondary/30 transition-all">
+<button class="p-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-colors">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<textarea class="flex-1 bg-transparent border-none focus:ring-0 py-3 text-sm resize-none font-body max-h-40 placeholder:text-on-surface-variant/50" placeholder="Deepen the research..." rows="1"></textarea>
+<div class="flex items-center gap-2 mb-1 mr-1">
+<button class="p-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-colors">
+<span class="material-symbols-outlined">mic</span>
+</button>
+<button class="bg-primary text-on-primary h-11 w-11 rounded-xl flex items-center justify-center shadow-lg hover:shadow-primary/20 hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+<!-- Context Indicator -->
+<div class="mt-3 px-2 flex justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+<span class="text-[10px] font-bold text-on-surface-variant">Library Context: ON</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-dim"></span>
+<span class="text-[10px] font-bold text-on-surface-variant">Advanced Logic Active</span>
+</div>
+</div>
+<p class="text-[10px] text-on-surface-variant/40 italic">Command + Enter to send</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic Overlay: Asymmetric Decorative Element -->
+<div class="fixed top-20 right-[-100px] w-64 h-64 bg-secondary/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
+</main>
+</body></html>
