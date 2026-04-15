@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
+@import "tailwindcss";
+
+/* ============================================
+   ACADEMIC SANCTUARY — Design System Tokens
+   ============================================ */
+
+@theme inline {
+  /* --- Primary (Slate) --- */
+  --color-primary: #515f74;
+  --color-primary-dim: #455368;
+  --color-primary-container: #d5e3fd;
+  --color-primary-fixed: #d5e3fd;
+  --color-primary-fixed-dim: #c7d5ee;
+  --color-on-primary: #f6f7ff;
+  --color-on-primary-container: #455367;
+  --color-on-primary-fixed: #324054;
+  --color-on-primary-fixed-variant: #4e5c71;
+  --color-inverse-primary: #d5e3fd;
+
+  /* --- Secondary (Deep Indigo) --- */
+  --color-secondary: #5148d8;
+  --color-secondary-dim: #453acc;
+  --color-secondary-container: #e3dfff;
+  --color-secondary-fixed: #e3dfff;
+  --color-secondary-fixed-dim: #d3d0ff;
+  --color-on-secondary: #fbf7ff;
+  --color-on-secondary-container: #4338ca;
+  --color-on-secondary-fixed: #2f1eb8;
+  --color-on-secondary-fixed-variant: #4e44d4;
+
+  /* --- Tertiary --- */
+  --color-tertiary: #4a4bd7;
+  --color-tertiary-dim: #3d3dcb;
+  --color-tertiary-container: #7073ff;
+  --color-tertiary-fixed: #7073ff;
+  --color-tertiary-fixed-dim: #6366f1;
+  --color-on-tertiary: #fbf7ff;
+  --color-on-tertiary-container: #000000;
+  --color-on-tertiary-fixed: #000000;
+  --color-on-tertiary-fixed-variant: #010028;
+
+  /* --- Surfaces --- */
+  --color-surface: #f7f9fb;
+  --color-surface-dim: #cfdce3;
+  --color-surface-bright: #f7f9fb;
+  --color-surface-variant: #d9e4ea;
+  --color-surface-tint: #515f74;
+  --color-surface-container: #e8eff3;
+  --color-surface-container-low: #f0f4f7;
+  --color-surface-container-high: #e1e9ee;
+  --color-surface-container-highest: #d9e4ea;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface: #2a3439;
+  --color-on-surface-variant: #566166;
+  --color-inverse-surface: #0b0f10;
+  --color-inverse-on-surface: #9a9d9f;
+  --color-background: #f7f9fb;
+  --color-on-background: #2a3439;
+
+  /* --- Error --- */
+  --color-error: #9f403d;
+  --color-error-dim: #4e0309;
+  --color-error-container: #fe8983;
+  --color-on-error: #fff7f6;
+  --color-on-error-container: #752121;
+
+  /* --- Outline --- */
+  --color-outline: #717c82;
+  --color-outline-variant: #a9b4b9;
+
+  /* --- Typography --- */
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+}
+
+/* ============================================
+   Google Fonts & Icon Imports
+   ============================================ */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
+
+/* ============================================
+   Base Styles
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+}
+
+::selection {
+  background-color: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+}
+
+/* ============================================
+   Material Symbols Configuration
+   ============================================ */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* ============================================
+   Component Utilities
+   ============================================ */
+
+/* Soft-Inset Input Focus (Design System Spec: Indigo bottom bar) */
+.soft-inset-input:focus-within {
+  border-bottom: 2px solid var(--color-secondary);
+}
+
+/* Inset Shadow Focus (for signup page inputs) */
+.inset-shadow-focus {
+  box-shadow: inset 0 -2px 0 0 var(--color-on-secondary-container);
+}
+
+/* Premium Glow Shadow */
+.premium-glow {
+  box-shadow: 0 24px 48px -12px rgba(42, 52, 57, 0.06);
+}
+
+/* Glass Panel */
+.glass-panel {
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Soft Inset Shadow */
+.soft-inset-shadow {
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+}
+
+/* Ghost Border (Design System: outline-variant at 15% opacity) */
+.ghost-border {
+  border: 1px solid rgba(169, 180, 185, 0.15);
+}
+
+/* Asymmetric dot pattern */
+.asymmetric-pattern {
+  background-image: radial-gradient(circle at 2px 2px, #a9b4b9 1px, transparent 0);
+  background-size: 32px 32px;
+  opacity: 0.15;
+}
+
+/* ============================================
+   Scrollbar Utilities
+   ============================================ */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ============================================
+   Animation Utilities
+   ============================================ */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out;
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out;
+}
